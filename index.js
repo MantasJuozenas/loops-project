@@ -19,11 +19,10 @@ loadImages();
 //Listens for scroll event and loads more images
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY +
-      window.innerHeight >= document.documentElement.scrollHeight);
+  if ((window.innerHeight + Math.ceil(window.pageYOffset)) >= document.body.offsetHeight)
    {
     loadImages();
-  }
+  } 
 });
 
 //Renders images
